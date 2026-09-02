@@ -16,7 +16,8 @@ const CONFIG = {
   finalMessage: "Yeni yaşında sənə bol-bol xoşbəxtlik, gözəl günlər və həmişə üzünü güldürəcək anlar arzulayıram. Yaxşı ki, varsan. ❤️",
   hiddenMessageEnabled: true,
   hiddenMessage: "Bu qədər. Sadəcə üzündə bir təbəssüm yaratmaq istədim. ❤️",
-  signature: "✦ For Jamila ♡ ᯓ✈︎",
+  signature: `✦ For Jamila ♡ ᯓ✈︎
+17.09.2026🤍`,
 };
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
