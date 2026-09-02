@@ -11,7 +11,7 @@ const CONFIG = {
   personalMessage3: "Hazırsansa, əsas sürprizə keçək.",
   watchButtonText: "Videoya bax",
   videoPath: "birthday-video.mp4",
-  finalPrelude: "Vəssalam... ❤️",
+  finalPrelude: "Əzizim... ❤️",
   finalTitle: "Ad günün mübarək!",
   finalMessage: "Yeni yaşında sənə bol-bol xoşbəxtlik, gözəl günlər və həmişə üzünü güldürəcək anlar arzulayıram. Yaxşı ki, varsan. ❤️",
   hiddenMessageEnabled: true,
