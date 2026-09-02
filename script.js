@@ -13,7 +13,7 @@ const CONFIG = {
   videoPath: "birthday-video.mp4",
   finalPrelude: "Əzizim ✨",
   finalTitle: "Ad günün mübarək!",
-  finalMessage: "Yeni yaşında sənə bol-bol xoşbəxtlik, gözəl günlər və həmişə üzünü güldürəcək anlar arzulayıram. Yaxşı ki, varsan. ❤️",
+  finalMessage: "Yeni yaşında sənə əsəs can sağlığı, bol-bol xoşbəxtlik, gözəl günlər və həmişə üzünü güldürəcək anlar arzulayıram. Yaxşı ki, varsan. ❤️",
   hiddenMessageEnabled: true,
   hiddenMessage: "Bu qədər. Sadəcə mənim üçün necə dəyərli olduğunu bilməni istəyirəm. ❤️",
   signature: `✦ For Jamila ♡ ᯓ✈︎
