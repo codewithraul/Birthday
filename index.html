@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="az">
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+  <meta name="theme-color" content="#07070b"> 
+  <meta name="description" content="Sənin üçün hazırlanmış xüsusi ad günü sürprizi."> 
+
+  <title>Ad günün mübarək</title>
+<link rel="icon" href="./logo.png">
+<link rel="stylesheet" href="style.css"> 
+  <script src="script.js" defer></script> 
+</head>
+
+<body>
+  <noscript>Bu sürprizi açmaq üçün JavaScript aktiv olmalıdır.</noscript>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-one"></span><span class="orb orb-two"></span>
+    <div id="ambientParticles" class="ambient-particles"></div>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <main id="experience" class="experience">
+    <section id="loading" class="scene loading-scene is-active" aria-labelledby="loadingText">
+      <div class="loader-wrap">
+        <p id="loadingText" class="eyebrow">Uploaded specifically for Jamila...</p>
+        <span class="loader" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section id="intro" class="scene intro-scene" aria-labelledby="introTitle" aria-hidden="true">
+      <div class="scene-content intro-content">
+        <p class="eyebrow reveal-item">Xüsusi bir an</p>
+        <h1 id="introTitle" class="display-title reveal-item"></h1>
+        <p id="introPrompt" class="lead reveal-item">Hazırsansa, aç <span aria-hidden="true">✦</span></p>
+
+        <div id="envelope" class="envelope" aria-hidden="true">
+          <div class="envelope-shadow"></div>
+          <div class="envelope-back"></div>
+          <div class="letter"><span class="letter-mark">✦</span></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+          <div class="seal"><span>✦</span></div>
+          <div class="envelope-glow"></div>
+        </div>
+
+        <button id="openSurprise" class="button button-primary reveal-item" type="button" aria-label="Sürprizi aç">
+          <span class="button-icon" aria-hidden="true">✦</span><span id="openButtonText">SÜRPRİZİ AÇ</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="message" class="scene message-scene" aria-labelledby="messageTitle" aria-hidden="true">
+      <div class="scene-content narrow glass-panel">
+        <p class="eyebrow">Sənin üçün Cəmilə</p>
+        <div class="message-sequence">
+          <h2 id="messageTitle" class="message-line"></h2>
+          <p id="messageSecond" class="message-line"></p>
+          <p id="messageThird" class="message-line"></p>
+        </div>
+        <button id="watchVideo" class="button button-secondary message-action" type="button" aria-label="Videoya bax">
+          <span id="watchButtonText">Videoya bax</span><span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="videoScene" class="scene video-scene" aria-labelledby="videoTitle" aria-hidden="true">
+      <div class="scene-content video-content">
+        <div class="video-heading">
+          <p class="eyebrow">Əsas sürpriz</p>
+          <h2 id="videoTitle">Sənin üçün 🫶🏻</h2>
+        </div>
+        <div id="videoFrame" class="video-frame">
+          <video id="birthdayVideo" controls playsinline preload="metadata" aria-label="Ad günü sürpriz videosu"></video>
+          <div id="videoError" class="video-error" role="status" hidden>
+            <span class="error-symbol" aria-hidden="true">✦</span>
+            <h3>Video hazırda əlçatan deyil.</h3>
+            <p>Bir az sonra yenidən yoxla.</p>
+          </div>
+        </div>
+        <button id="skipToFinal" class="text-button" type="button">Final mesaja keç</button>
+      </div>
+    </section>
+
+    <section id="final" class="scene final-scene" aria-labelledby="finalTitle" aria-hidden="true">
+      <div id="celebration" class="celebration" aria-hidden="true"></div>
+      <div class="scene-content final-content">
+        <p id="finalPrelude" class="final-prelude"></p>
+        <h2 id="finalTitle" class="final-title"></h2>
+        <p id="finalMessage" class="final-message"></p>
+
+        <button id="hiddenMessageButton" class="button button-secondary hidden-message-button" type="button" aria-expanded="false" aria-controls="hiddenMessage">Bir şey də var...</button>
+        <div id="hiddenMessage" class="hidden-message" hidden>
+          <p id="hiddenMessageText"></p>
+        </div>
+        <p id="signature" class="signature"></p>
+        <button id="replayExperience" class="text-button replay-button" type="button">Yenidən bax</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="liveRegion" class="sr-only" aria-live="polite"></div>
+</body>
+</html>
