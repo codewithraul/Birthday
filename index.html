@@ -1,65 +1,83 @@
 <!doctype html>
 <html lang="az">
-<head> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
-  <meta name="theme-color" content="#07070b"> 
-  <meta name="description" content="Sənin üçün hazırlanmış xüsusi ad günü sürprizi."> 
-
-  <title>Ad günün mübarək</title>
-<link rel="icon" href="./logo.png">
-<link rel="stylesheet" href="style.css"> 
-  <script src="script.js" defer></script> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05050a">
+  <meta name="description" content="Cəmilə üçün hazırlanmış xüsusi ad günü sürprizi.">
+  <title>Cəmilə üçün xüsusi sürpriz</title>
+  <link rel="icon" href="./logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
   <noscript>Bu sürprizi açmaq üçün JavaScript aktiv olmalıdır.</noscript>
-  <div class="ambient" aria-hidden="true">
-    <span class="orb orb-one"></span><span class="orb orb-two"></span>
-    <div id="ambientParticles" class="ambient-particles"></div>
+
+  <div class="cinematic-bg" aria-hidden="true">
+    <span class="aurora aurora-one"></span>
+    <span class="aurora aurora-two"></span>
+    <span class="aurora aurora-three"></span>
+    <div id="starField" class="star-field"></div>
+    <div class="vignette"></div>
+    <div class="grain"></div>
   </div>
-  <div class="noise" aria-hidden="true"></div>
+
+  <button id="soundToggle" class="sound-toggle" type="button" aria-label="Səsi aktiv et" aria-pressed="false">
+    <span class="sound-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span id="soundLabel">SƏS</span>
+  </button>
 
   <main id="experience" class="experience">
     <section id="loading" class="scene loading-scene is-active" aria-labelledby="loadingText">
       <div class="loader-wrap">
-        <p id="loadingText" class="eyebrow">Uploaded specifically for Jamila...</p>
-        <span class="loader" aria-hidden="true"></span>
+        <div class="monogram" aria-hidden="true"><span>J</span></div>
+        <p id="loadingText" class="eyebrow">XÜSUSİ OLARAQ CƏMİLƏ ÜÇÜN</p>
+        <div class="loader"><span></span></div>
       </div>
     </section>
 
     <section id="intro" class="scene intro-scene" aria-labelledby="introTitle" aria-hidden="true">
       <div class="scene-content intro-content">
-        <p class="eyebrow reveal-item">Xüsusi bir an</p>
+        <p class="eyebrow reveal-item">17 Sentyabr · Xüsusi bir an</p>
         <h1 id="introTitle" class="display-title reveal-item"></h1>
-        <p id="introPrompt" class="lead reveal-item">Hazırsansa, aç <span aria-hidden="true">✦</span></p>
+        <p id="introPrompt" class="lead reveal-item"></p>
 
         <div id="envelope" class="envelope" aria-hidden="true">
+          <div class="envelope-aura"></div>
           <div class="envelope-shadow"></div>
           <div class="envelope-back"></div>
-          <div class="letter"><span class="letter-mark">✦</span></div>
+          <div class="letter">
+            <span class="letter-border"></span>
+            <span class="letter-mark">J</span>
+            <small>yalnız sənin üçün</small>
+          </div>
           <div class="envelope-front"></div>
           <div class="envelope-flap"></div>
-          <div class="seal"><span>✦</span></div>
-          <div class="envelope-glow"></div>
+          <div class="seal"><span>J</span></div>
+          <div class="envelope-sparkles"></div>
         </div>
 
-        <button id="openSurprise" class="button button-primary reveal-item" type="button" aria-label="Sürprizi aç">
-          <span class="button-icon" aria-hidden="true">✦</span><span id="openButtonText">SÜRPRİZİ AÇ</span>
+        <button id="openSurprise" class="button button-primary reveal-item magnetic" type="button">
+          <span class="button-glow"></span><span class="button-icon" aria-hidden="true">✦</span><span id="openButtonText"></span>
         </button>
+        <p class="micro-copy reveal-item">Ən yaxşı təcrübə üçün səsi aç</p>
       </div>
     </section>
 
     <section id="message" class="scene message-scene" aria-labelledby="messageTitle" aria-hidden="true">
       <div class="scene-content narrow glass-panel">
-        <p class="eyebrow">Sənin üçün Cəmilə</p>
+        <span class="panel-light" aria-hidden="true"></span>
+        <p class="eyebrow">Cəmilə üçün</p>
         <div class="message-sequence">
           <h2 id="messageTitle" class="message-line"></h2>
           <p id="messageSecond" class="message-line"></p>
           <p id="messageThird" class="message-line"></p>
         </div>
-        <button id="watchVideo" class="button button-secondary message-action" type="button" aria-label="Videoya bax">
-          <span id="watchButtonText">Videoya bax</span><span aria-hidden="true">▷</span>
+        <button id="watchVideo" class="button button-secondary message-action magnetic" type="button">
+          <span id="watchButtonText"></span><span class="play-mark" aria-hidden="true">▶</span>
         </button>
       </div>
     </section>
@@ -68,33 +86,33 @@
       <div class="scene-content video-content">
         <div class="video-heading">
           <p class="eyebrow">Əsas sürpriz</p>
-          <h2 id="videoTitle">Sənə özəl♡</h2>
+          <h2 id="videoTitle">Sənə özəl <span>♡</span></h2>
         </div>
         <div id="videoFrame" class="video-frame">
+          <span class="video-glow" aria-hidden="true"></span>
           <video id="birthdayVideo" controls playsinline preload="metadata" aria-label="Ad günü sürpriz videosu"></video>
           <div id="videoError" class="video-error" role="status" hidden>
             <span class="error-symbol" aria-hidden="true">✦</span>
             <h3>Video hazırda əlçatan deyil.</h3>
-            <p>Bir az sonra yenidən yoxla.</p>
+            <p><strong>birthday-video.mp4</strong> faylını bu qovluğa əlavə et.</p>
           </div>
         </div>
-        <button id="skipToFinal" class="text-button" type="button">Final mesaja keç</button>
+        <button id="skipToFinal" class="text-button" type="button">Final mesaja keç <span>→</span></button>
       </div>
     </section>
 
     <section id="final" class="scene final-scene" aria-labelledby="finalTitle" aria-hidden="true">
-      <div id="celebration" class="celebration" aria-hidden="true"></div>
+      <canvas id="celebrationCanvas" class="celebration-canvas" aria-hidden="true"></canvas>
       <div class="scene-content final-content">
+        <div class="final-halo" aria-hidden="true"></div>
         <p id="finalPrelude" class="final-prelude"></p>
         <h2 id="finalTitle" class="final-title"></h2>
+        <div class="ornament" aria-hidden="true"><span></span><b>✦</b><span></span></div>
         <p id="finalMessage" class="final-message"></p>
-
-        <button id="hiddenMessageButton" class="button button-secondary hidden-message-button" type="button" aria-expanded="false" aria-controls="hiddenMessage">Bir şey də var...</button>
-        <div id="hiddenMessage" class="hidden-message" hidden>
-          <p id="hiddenMessageText"></p>
-        </div>
+        <button id="hiddenMessageButton" class="button button-secondary hidden-message-button magnetic" type="button" aria-expanded="false" aria-controls="hiddenMessage">Bir şey də var...</button>
+        <div id="hiddenMessage" class="hidden-message" hidden><p id="hiddenMessageText"></p></div>
         <p id="signature" class="signature"></p>
-        <button id="replayExperience" class="text-button replay-button" type="button">Yenidən bax</button>
+        <button id="replayExperience" class="text-button replay-button" type="button">Yenidən bax <span>↻</span></button>
       </div>
     </section>
   </main>
